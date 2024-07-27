@@ -70,11 +70,11 @@ switch (foo) {
     break;
 }
 
-//Task 2:
+//Task 2: [true is used as the expression in the switch, and each case checks if the condition evaluates to true.]
 
 const marks = 75;
 
-switch (true) {
+switch (marks) {
   case marks <= 100 && marks >= 90:
     console.log("A");
     break;
@@ -92,3 +92,22 @@ switch (true) {
     console.log("E");
     break;
 }
+
+// Activity 4: Conditional Operator [Ternary Operator]
+const value = 7;
+const fun = value % 2 === 0 ? "Even" : "Odd";
+console.log(fun);
+
+// Activity 5: Determining if a Year is a Leap Year
+
+const year = 2024;
+
+const returnValue = year % 100 === 0 ? year % 400 === 0 : year % 4 === 0;
+console.log(returnValue);
+
+// This can be done like this too.
+// if(year % 100 === 0) {
+//   year % 400 === 0
+// } else {
+//   year % 4 === 0
+// }
