@@ -56,3 +56,72 @@ const checkAndReturn = (str1) => {
 };
 
 console.log(checkAndReturn("soumya"));
+
+// Activity 4: Functions Parameters and Default Values
+
+console.log("==================Activity 4====================");
+
+//Task1:
+function product(num1, num2 = 4) {
+  return num1 * num2;
+}
+console.log(product(7));
+
+//Task2:
+function greetingMesssage(name, age = 22) {
+  let message = `Welcome ${name} for coming to age ${age}.`;
+  return message;
+}
+console.log(greetingMesssage("Soumya"));
+
+// Activity 5: High order functions
+
+console.log("==================Activity 5====================");
+
+// Higher order functions means the function which calls another fucntions
+// eg:
+function add(a, b, cb) {
+  let reuslt = a + b;
+  cb(reuslt);
+}
+
+// also you can do in this way:
+function showResult(reuslt) {
+  console.log(reuslt);
+}
+
+add(5, 6, showResult);
+
+// add(4, 4, function (val) {
+//   console.log(val);
+// });
+
+//Task1:
+
+function repeatFn(fn, num) {
+  for (let i = 0; i < num; i++) {
+    fn();
+  }
+}
+
+function sayHello() {
+  console.log("Hello");
+}
+
+repeatFn(sayHello, 2);
+
+//Task2:
+function twoValue(fn, cb, value) {
+  const firstResult = fn(value);
+  const finalReuslt = cb(firstResult);
+  return finalReuslt;
+}
+
+function firstFn(num) {
+  return num + 9;
+}
+function secFun(num) {
+  return num * 45;
+}
+
+console.log(twoValue(firstFn, secFun, 8));
