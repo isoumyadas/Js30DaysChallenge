@@ -55,6 +55,23 @@ for (const i of allNum) {
   console.log("forOf", i);
 }
 
+//Task2:
 allNum.forEach((el) => {
   console.log("ForEach", el);
 });
+
+// Activity 5: Multidimensional Arrays
+
+// Mutlidimensional array are also called as arrays inside array.
+
+const xoList = [
+  ["x", null, null],
+  [null, null, "o"],
+  ["o", null, "x"],
+];
+
+// Task1:
+console.log("xoList", xoList);
+
+//Task2:
+console.log(xoList[2][2]);
