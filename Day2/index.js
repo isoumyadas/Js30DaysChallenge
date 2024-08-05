@@ -73,6 +73,7 @@ if (orCond || orCond2) {
 }
 
 if (!orCond) {
+  // here it makes false to true, as we have passed ! as not
   console.log("Payment is Failed");
 }
 if (orCond2) {

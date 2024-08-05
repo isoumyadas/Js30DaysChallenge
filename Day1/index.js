@@ -20,6 +20,7 @@ const objectData = {
   age: 22,
 };
 const arrayValue = ["sammy", 45, true, { city: "boisar" }];
+const ee = ["hhh"];
 
 console.log(
   typeof stringValue,
@@ -30,7 +31,9 @@ console.log(
   ":::>",
   typeof objectData,
   ":::>",
-  typeof arrayValue
+  typeof arrayValue,
+  "::>",
+  typeof ee
 );
 
 // Activity 4
@@ -42,9 +45,9 @@ myName = changeMyName;
 console.log(changeMyName);
 console.log(myName);
 
-const myyName = "Soumya ranjan das";
+let myyName = "Soumya ranjan das";
 console.log(myName);
-const changeMyyName = "No User";
+let changeMyyName = "No User";
 myyName = changeMyyName;
 console.log(changeMyyName);
 console.log(myyName);

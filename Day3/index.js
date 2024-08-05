@@ -74,7 +74,7 @@ switch (foo) {
 
 const marks = 75;
 
-switch (marks) {
+switch (true) {
   case marks <= 100 && marks >= 90:
     console.log("A");
     break;
