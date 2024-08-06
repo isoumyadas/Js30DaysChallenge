@@ -68,3 +68,40 @@ function sumThem(...allnums) {
 }
 
 console.log(sumThem(...nums));
+
+// Activity 4: Default Parameters
+
+const defaultParameters = (val, def = 1) => {
+  return val * def;
+};
+
+console.log(defaultParameters(6));
+
+// Activity 5: Enchaned Object literals
+
+//Task1
+const hello = "world";
+const eObj = {
+  hello,
+};
+console.log(eObj);
+
+// another way
+
+const anotherWay = {
+  age: 22,
+  greet() {
+    console.log("Hola");
+  },
+};
+console.log(anotherWay);
+
+//Task2 :
+// What is computed property =>
+// You can use expressions in square brackets to define property names:
+
+const name = "soumya";
+const yourName = {
+  [name]: "Das",
+};
+console.log(yourName);
