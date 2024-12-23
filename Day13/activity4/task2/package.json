@@ -1,0 +1,12 @@
+{
+  "name": "axios",
+  "version": "1.0.0",
+  "description": "Exploring axios",
+  "main": "index.js",
+  "author": "soumya",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}
