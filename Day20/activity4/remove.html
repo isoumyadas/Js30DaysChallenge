@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove method in session storage</title>
+  </head>
+  <body></body>
+  <script>
+    sessionStorage.setItem("name", "messi");
+    console.log(sessionStorage.getItem("name"));
+
+    // setTimeout(() => sessionStorage.removeItem("name"), 3000);
+    sessionStorage.removeItem("name");
+
+    console.log("After remove:: ", sessionStorage.getItem("name"));
+  </script>
+</html>

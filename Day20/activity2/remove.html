@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove method</title>
+  </head>
+  <body>
+    <h3></h3>
+  </body>
+  <script>
+    const heading = document.querySelector("h3");
+
+    const name = localStorage.setItem("name", "Soumya");
+    console.log(localStorage.getItem("name"));
+    heading.textContent = `Your name is ${localStorage.getItem("name")}`;
+
+    // setTimeout(() => {
+    localStorage.removeItem("name");
+    // }, 3000);
+    console.log("After remove item::", localStorage.getItem("name")); // after removal of key name, it will print null.
+  </script>
+</html>

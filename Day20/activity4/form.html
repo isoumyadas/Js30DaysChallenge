@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session form storage</title>
+  </head>
+  <body>
+    <form id="normalForm">
+      <input type="text" id="name" placeholder="Your name" />
+      <input type="email" id="email" placeholder="Your email" />
+      <button>submit</button>
+    </form>
+  </body>
+
+  <script>
+    const formId = document.querySelector("#normalForm");
+    const nameInput = document.querySelector("#name");
+    const emailInput = document.querySelector("#email");
+    const para = document.createElement("p");
+
+    // Saving in localStorage
+
+    formId.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = nameInput.value;
+      const email = emailInput.value;
+
+      if (!name || name === "") {
+        alert("Please enter your name");
+        console.log("No name is inputed");
+      } else {
+        sessionStorage.setItem("name", name);
+      }
+
+      if (!email || email === "") {
+        alert("Please enter your email");
+        console.log("No email is inputed");
+      } else {
+        sessionStorage.setItem("email", email);
+      }
+    });
+
+    window.addEventListener("load", (e) => {
+      const name = sessionStorage.getItem("name");
+      const email = sessionStorage.getItem("email");
+
+      para.textContent = `NAME: ${name} | EMAIL: ${email}`;
+
+      document.body.appendChild(para);
+    });
+  </script>
+</html>

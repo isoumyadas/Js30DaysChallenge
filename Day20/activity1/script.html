@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic LocalStorage</title>
+  </head>
+  <body bgcolor="black"></body>
+  <script>
+    // Task1
+    localStorage.setItem("name", "soumya");
+    console.log(`Your name is ${localStorage.getItem("name")}`);
+
+    //Task2
+    const obj = { name: "Messi", knownAs: "Greatest of all time" };
+    localStorage.setItem("player", JSON.stringify(obj));
+
+    //getItem
+    const playerName = JSON.parse(localStorage.getItem("player"));
+    console.log(playerName.name);
+
+    const playerKnowFor = playerName.knownAs;
+    console.log(playerKnowFor);
+  </script>
+</html>
